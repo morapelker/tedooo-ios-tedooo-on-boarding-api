@@ -1,0 +1,7 @@
+use_frameworks!
+target 'TedoooOnBoardingApi_Tests' do
+  pod 'TedoooOnBoardingApi', :path => '../'
+  
+  pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~> 10.0.0'
+end
