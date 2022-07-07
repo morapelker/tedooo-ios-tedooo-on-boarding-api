@@ -25,7 +25,7 @@ public struct GroupSuggestion: Encodable {
 
 public struct BusinessSuggestion: Encodable {
     
-    public static func == (lhs: GroupSuggestion, rhs: GroupSuggestion) -> Bool {
+    public static func == (lhs: BusinessSuggestion, rhs: BusinessSuggestion) -> Bool {
         return lhs.id == rhs.id
     }
     
