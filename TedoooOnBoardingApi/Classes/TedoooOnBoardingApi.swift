@@ -19,6 +19,16 @@ public struct GroupSuggestion: Encodable {
 }
 
 public struct BusinessSuggestion: Encodable {
+    public init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
+        self.id = id
+        self.name = name
+        self.rating = rating
+        self.totalReviews = totalReviews
+        self.categories = categories
+        self.description = description
+        self.image = image
+    }
+    
     
     public let id: String
     public let name: String
@@ -26,15 +36,8 @@ public struct BusinessSuggestion: Encodable {
     public let totalReviews: Int
     public let categories: [String]
     public let description: String
+    public let image: String?
     
-    public init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String) {
-        self.id = id
-        self.name = name
-        self.rating = rating
-        self.totalReviews = totalReviews
-        self.categories = categories
-        self.description = description
-    }
     
 }
 
