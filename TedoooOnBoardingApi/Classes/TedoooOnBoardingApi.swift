@@ -19,7 +19,7 @@ public struct GroupSuggestion: Encodable {
 }
 
 public struct BusinessSuggestion: Encodable {
-    public init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
+    internal init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
         self.id = id
         self.name = name
         self.rating = rating
@@ -38,7 +38,20 @@ public struct BusinessSuggestion: Encodable {
     public let description: String
     public let image: String?
     
+}
+
+public struct FinishOnBoardingRequest: Encodable {
+    public init(interests: [String], preferences: [String], groups: [String], businesses: [String]) {
+        self.interests = interests
+        self.preferences = preferences
+        self.groups = groups
+        self.businesses = businesses
+    }
     
+    public let interests: [String]
+    public let preferences: [String]
+    public let groups: [String]
+    public let businesses: [String]
 }
 
 public protocol TedoooOnBoardingApi {
@@ -47,4 +60,7 @@ public protocol TedoooOnBoardingApi {
     
     func getBusinessSuggestions() -> AnyPublisher<[BusinessSuggestion], Never>
     
+    func finishOnBoarding(
+        request: FinishOnBoardingRequest
+    ) -> AnyPublisher<Any?, Never>
 }
