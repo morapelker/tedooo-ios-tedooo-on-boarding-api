@@ -2,6 +2,11 @@ import Combine
 
 public struct GroupSuggestion: Encodable {
     
+    
+    public static func == (lhs: GroupSuggestion, rhs: GroupSuggestion) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     public let id: String
     public let name: String
     public let participants: Int
@@ -19,6 +24,12 @@ public struct GroupSuggestion: Encodable {
 }
 
 public struct BusinessSuggestion: Encodable {
+    
+    public static func == (lhs: GroupSuggestion, rhs: GroupSuggestion) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
     public init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
         self.id = id
         self.name = name
