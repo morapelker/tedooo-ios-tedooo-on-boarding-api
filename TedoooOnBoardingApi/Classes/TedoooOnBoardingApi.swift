@@ -19,7 +19,7 @@ public struct GroupSuggestion: Encodable {
 }
 
 public struct BusinessSuggestion: Encodable {
-    internal init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
+    public init(id: String, name: String, rating: CGFloat, totalReviews: Int, categories: [String], description: String, image: String?) {
         self.id = id
         self.name = name
         self.rating = rating
