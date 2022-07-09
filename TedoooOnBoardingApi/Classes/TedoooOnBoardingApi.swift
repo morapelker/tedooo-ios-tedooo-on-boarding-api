@@ -1,6 +1,6 @@
 import Combine
 
-public struct GroupSuggestion: Encodable, Equatable{
+public struct GroupSuggestion: Codable, Equatable{
     
     
     public static func == (lhs: GroupSuggestion, rhs: GroupSuggestion) -> Bool {
