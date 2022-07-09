@@ -67,7 +67,7 @@ public struct FinishOnBoardingRequest: Encodable {
 
 public protocol TedoooOnBoardingApi {
     
-    func getGroupSuggestions() -> AnyPublisher<[GroupSuggestion], Never>
+    func getGroupSuggestions(interests: [String]) -> AnyPublisher<[GroupSuggestion], Never>
     
     func getBusinessSuggestions() -> AnyPublisher<[BusinessSuggestion], Never>
     
