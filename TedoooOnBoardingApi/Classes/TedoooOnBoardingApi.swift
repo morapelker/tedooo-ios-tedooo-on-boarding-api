@@ -69,7 +69,7 @@ public protocol TedoooOnBoardingApi {
     
     func getGroupSuggestions(interests: [String]) -> AnyPublisher<[GroupSuggestion], Never>
     
-    func getBusinessSuggestions() -> AnyPublisher<[BusinessSuggestion], Never>
+    func getBusinessSuggestions(interests: [String]) -> AnyPublisher<[BusinessSuggestion], Never>
     
     func finishOnBoarding(
         request: FinishOnBoardingRequest
