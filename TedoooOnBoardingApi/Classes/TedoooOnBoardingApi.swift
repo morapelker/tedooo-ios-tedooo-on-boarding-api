@@ -1,6 +1,6 @@
 import Combine
 
-public struct GroupSuggestion: Codable, Equatable{
+public struct GroupSuggestion: Decodable, Equatable{
     
     
     public static func == (lhs: GroupSuggestion, rhs: GroupSuggestion) -> Bool {
@@ -23,7 +23,7 @@ public struct GroupSuggestion: Codable, Equatable{
     
 }
 
-public struct BusinessSuggestion: Encodable, Equatable {
+public struct BusinessSuggestion: Decodable, Equatable {
     
     public static func == (lhs: BusinessSuggestion, rhs: BusinessSuggestion) -> Bool {
         return lhs.id == rhs.id
