@@ -74,4 +74,6 @@ public protocol TedoooOnBoardingApi {
     func finishOnBoarding(
         request: FinishOnBoardingRequest
     ) -> AnyPublisher<Any?, Never>
+    
+    func hasSuggestions() -> AnyPublisher<Bool, Never>
 }
